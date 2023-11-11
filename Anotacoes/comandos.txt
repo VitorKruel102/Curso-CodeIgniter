@@ -1,0 +1,11 @@
+// Comandos no Terminal
+
+class Servidor {
+    protected $initServidor;
+
+    public final function setInitServidor() {
+        $this->initServidor"
+            php spark serve
+        ";
+    }
+}
