@@ -1,0 +1,58 @@
+// CodeIgniter
+
+// Padrão de projeto
+CONST MVC = 'Models Views Controller';
+
+class Model {
+    private $introducao;
+
+    public function __construct() {
+        this->introducao = "
+            Representa qualquer tipo de dados do
+            seu aplicativo. Por Exemplo: DB, API,
+            Aquivo XML etc...(CRUD)
+        ";
+    }
+}
+
+class View {
+    private $introducao;
+    private $ajuda;
+
+    public function __construct() {
+        this->introducao = "
+            Responsáveis por renderizar as informações
+            recebidas dos controladores/modelos e 
+            apresentar o resultado em HTML.
+        ";
+    }
+
+    public function setAjuda() {
+        $this->ajuda = "
+            CodeIgniter possui classes e funções que 
+            auxiliam na criação final nas Views.
+        ";
+    }
+}
+
+class Controller {
+    private $introducao;
+    private $funcionalidade;
+
+    public function __construct() {
+        this->introducao = "
+            É o célebro da aplicação. As regras de negócios 
+            são definitas nessa estrutura. Eles processam os 
+            pedidos, manipulam os models ou até mesmo outro 
+            controlador
+        ";
+    }
+
+    public function setFuncionalidade() {
+        $this->funcionalidade = "
+            Lidam com requisições Web, dados de formulários,
+            pedindo informações ao Model e reenviando ao Model
+            informações a serem salvs no DB, por exemplo.
+        ";
+    }
+}
