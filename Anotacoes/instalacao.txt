@@ -6,12 +6,12 @@ class InstalacaoCodeIgniter {
     private $inicializacao;
 
     public function __construct() {
-        this->setInicializacao();
+        $this->setInicializacao();
     }
 
     public function setInicializacao() {
         $nomeProjeto = "Projeto001";
-        this->$inicializacao = "
+        $this->inicializacao = "
             composer create-project codeigniter4/appstarter $nomeProjeto
         ";
     }

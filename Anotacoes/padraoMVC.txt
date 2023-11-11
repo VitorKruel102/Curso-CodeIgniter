@@ -7,7 +7,7 @@ class Model {
     private $introducao;
 
     public function __construct() {
-        this->introducao = "
+        $this->introducao = "
             Representa qualquer tipo de dados do
             seu aplicativo. Por Exemplo: DB, API,
             Aquivo XML etc...(CRUD)
@@ -20,7 +20,7 @@ class View {
     private $ajuda;
 
     public function __construct() {
-        this->introducao = "
+        $this->introducao = "
             Responsáveis por renderizar as informações
             recebidas dos controladores/modelos e 
             apresentar o resultado em HTML.
@@ -40,7 +40,7 @@ class Controller {
     private $funcionalidade;
 
     public function __construct() {
-        this->introducao = "
+        $this->introducao = "
             É o célebro da aplicação. As regras de negócios 
             são definitas nessa estrutura. Eles processam os 
             pedidos, manipulam os models ou até mesmo outro 
