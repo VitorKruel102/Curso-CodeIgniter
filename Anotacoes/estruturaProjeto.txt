@@ -1,0 +1,64 @@
+// Entendendo as pastas do CodeIgniter
+
+class App {
+    private $introducao;
+    
+    public funtion __construct() {
+        $this->introducao = "
+            Local aonde iremos desenvolver todo o projeto Web
+            da nossa aplicação. É aonde fica a Estrutura MVC 
+            do projeto.
+        ";
+    }
+}
+
+class Public {
+    private $introducao;
+    
+    public funtion __construct() {
+        $this->introducao = "
+            É a porta de entrada da nossa Aplicação!
+            É uma aréa pouco utilizada no desenvolvimento.
+        ";
+    }
+}
+
+final class System {
+    protected $introducao;
+    
+    public final funtion __construct() {
+        $this->introducao = "
+            É o CORE do FrameWork, 
+            NUNCA DEVEREMOS MEXER NESTA PÁGINA.
+        ";
+    }
+}
+
+class Writable {
+    private $introducao;
+    
+    public funtion __construct() {
+        $this->introducao = "
+            É utilizado quando temos em nosso aplicação uma
+            funcionalide de fazer UPLOAD de arquivos de terceiros
+            ou, por exemplo, registro de logs do usuário da 
+            aplicação, então esse Diretório deverá ser usado para 
+            guardar essas informações.
+        ";
+    }
+}
+
+class Env  {
+    private $introducao;
+    private $CLI_ENVIRONMENT;
+
+    public funtion __construct() {
+        $this->introducao = "Contem nossas variáveis de Ambiente";
+    }
+
+    public function setCLI_ENVIRONMENT() {
+        $this->CLI_ENVIRONMENT = "
+        
+        ";
+    }
+}
