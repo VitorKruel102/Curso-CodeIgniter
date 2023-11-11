@@ -1,0 +1,18 @@
+// Instalação do CodeIgniter pelo Composer
+
+// Instalar o Composer
+
+class InstalacaoCodeIgniter {
+    private $inicializacao;
+
+    public function __construct() {
+        this->setInicializacao();
+    }
+
+    public function setInicializacao() {
+        $nomeProjeto = "Projeto001";
+        this->$inicializacao = "
+            composer create-project codeigniter4/appstarter $nomeProjeto
+        ";
+    }
+}
