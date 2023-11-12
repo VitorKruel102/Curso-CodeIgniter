@@ -5,6 +5,7 @@ class App {
     private $config;
     private $controller;
     private $helpers;
+    private $libraries;
     
     public funtion __construct() {
         $this->introducao = "
@@ -80,6 +81,18 @@ class App {
         ";
     }
 
+    public function setLibraries() {
+        $this->libraries = "
+            É um diretorio que podemos criar nossas próprias class, ou utilizar
+            classes do proprio FrameWork. 
+            Recomendações:
+                -> Criar uma pasta para uma melhor organização;
+                -> O mesmo nome do arquivo deve ser o da classe;
+                -> Colocar o namespace no arquivo (namespace App\Libraries\Loja;);
+                -> Adicionar o use no arquivo controller (use App\Libraries\Loja\Venda;);
+                -> Agora já podemos utilizar a classe.
+        ";
+    }
 }
 
 class Public {
