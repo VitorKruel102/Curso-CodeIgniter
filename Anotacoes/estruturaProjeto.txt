@@ -4,6 +4,7 @@ class App {
     private $introducao;
     private $config;
     private $controller;
+    private $helpers;
     
     public funtion __construct() {
         $this->introducao = "
@@ -30,7 +31,7 @@ class App {
     public function setController() {
         $this->controller = "
             Contem as Class responsáveis por gerenciar os requests
-            dos usuários e enviar querys para o Models ou solicitar
+            dos usuários e solicitar querys para o Models ou solicitar
             as views.
         ";
 
@@ -44,6 +45,38 @@ class App {
             Exemplo:
                 $date['frase'] = "Testando Frase";
                 podemos adicionar no HTML o <?=$frase?> que retornará a frase "Testando Frase"
+        ";
+
+        $metodosPublicos = "Podem ser acessados via URL, exemplo: '/Main/Metodo1'";
+
+        $metodosPrivados = "
+            Não podem ser acessados via URL, desta forma o método fica protegido
+            e só poderar ser chamado dentro da classe para realizar algo especifico
+            do controller.
+        ";
+    }
+
+    public function setHelpers() {
+        $this->helpers = "
+            É um diretorio que podemos criar nossas próprias funções, porém, 
+            podemos acessar funções já criadas pelo proprio FrameWork que podemos 
+            utiliza-los também, para issso precisamos olhar na Documentação e 
+            adiciona-lo em nossa classe. Precisamos criar um atributo: 
+                protected $helpers = array('date'); // SEMPRE EM MINUSCULO
+
+            Dentro do array adicionamos os conjuntos de funções que vamos
+            utilizar.
+        ";
+
+        $criarHelpers() = "
+            Para criar um helpers, precisamos criar um arquivo dentro da pasta
+            seguindo uma nomenclatura:
+                Matematica_helper.php (OBRIGADO ter '_helper.php' no final);
+            
+            Dentro do arquivo criado, iremos criar todas as funções que 
+            desejamos. Para utilizar as funções bastas adicionar no
+            $helpes da classe controller.
+                protected $helpers = array('date', 'matamatica'); // SEMPRE EM MINUSCULO
         ";
     }
 
