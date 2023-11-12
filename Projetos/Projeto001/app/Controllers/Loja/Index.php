@@ -4,16 +4,24 @@ use App\Libraries\Loja\Venda;
 use CodeIgniter\Controller;
 
 
-class Vendas extends Controller {
+class Index extends Controller {
     protected $helpers = array('date', 'matematica');
 
     public function index() {
-        $data["frase"] = adicionar(1, 5);
+        $marcas = [
+            'Audi',
+            'Porsche',
+            'Ferrari',
+            'Mercedes',
+        ];
+        $data = [
+            'marcas' => $marcas,
+        ];
 
         $v = new Venda();
         $v->produto = 'Automovel';
         $v->preco = '100';
 
-        return view("pagina1", $data);
+        return view("Loja\Pagina", $data, ["cache" => 60]);
     }
 }

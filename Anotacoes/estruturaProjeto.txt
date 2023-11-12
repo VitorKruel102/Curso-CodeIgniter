@@ -38,11 +38,12 @@ class App {
 
         $returnView() = "
             Utilizamos o return view() para solicitar a renderização
-            do HTML para o usuário, essa função possuí dois parametros:
-            ('pagina1', $date)
+            do HTML para o usuário, essa função possuí três parametros:
+            ('pagina1', $date, ["cache" => 60])
                 'templates/pagina1' -> É o caminho apartir da pasta View até o arquivo HTML(.php)
                 $date -> É um array onde podemos adicionar informações para
                          ser renderizado no HTML.
+                ["cache" => 60] -> Vai guardar as informações da View no Cache por 60segundos.
             Exemplo:
                 $date['frase'] = "Testando Frase";
                 podemos adicionar no HTML o <?=$frase?> que retornará a frase "Testando Frase"
