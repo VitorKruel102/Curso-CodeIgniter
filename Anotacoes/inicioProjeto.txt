@@ -1,0 +1,19 @@
+// Inicio do projeto
+
+Precisamos inicialmente realizar algumas configurações
+iniciais:
+
+DEFINIR BASE_URL
+----------------
+    1° - App/Config/App.php:
+        Deixar vazia a variável baseURL --> public string $baseURL = '';
+    2° - .env:
+        Descomentar e adicionar a baseURL --> app.baseURL = 'http://localhost:8080/'
+
+DEFINIR CI_ENVIRONMENT
+----------------------
+Precisamos definir que estamos no desenvolvimento do projeto, 
+como padrão o CodeIgniter deixa a aplicação em production
+    
+    1° - .env:
+        Descomentar e adicionar --> CI_ENVIRONMENT = development

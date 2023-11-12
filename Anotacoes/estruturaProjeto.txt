@@ -2,6 +2,8 @@
 
 class App {
     private $introducao;
+    private $config;
+    private $controller;
     
     public funtion __construct() {
         $this->introducao = "
@@ -10,6 +12,41 @@ class App {
             do projeto.
         ";
     }
+
+    public function setConfig() {
+        $this->config = "
+            Contém as configurações personalidas do projeto
+        ";
+
+        $pastaRoutes = "
+            É aonde definimos as rotas URL's do projeto. Por exemplo:
+            ---> $routes->get('/', 'Main::index');
+            Onde:
+                '/'   -> É caminho da URL para ser acessada;
+                Main  -> É o nome do arquivo e da Class Controller;
+                index -> É o metodo da class que chama a View.
+        ";
+    }
+    public function setController() {
+        $this->controller = "
+            Contem as Class responsáveis por gerenciar os requests
+            dos usuários e enviar querys para o Models ou solicitar
+            as views.
+        ";
+
+        $returnView() = "
+            Utilizamos o return view() para solicitar a renderização
+            do HTML para o usuário, essa função possuí dois parametros:
+            ('pagina1', $date)
+                'templates/pagina1' -> É o caminho apartir da pasta View até o arquivo HTML(.php)
+                $date -> É um array onde podemos adicionar informações para
+                         ser renderizado no HTML.
+            Exemplo:
+                $date['frase'] = "Testando Frase";
+                podemos adicionar no HTML o <?=$frase?> que retornará a frase "Testando Frase"
+        ";
+    }
+
 }
 
 class Public {
